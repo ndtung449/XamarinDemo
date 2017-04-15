@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
+             xmlns:viewmodel="clr-namespace:Samples.ViewModels"
+             x:Class="Samples.Pages.GridViewSample">
+
+    <controls:GridView ItemHeight="300" ItemWidth="300" ItemsSource="{Binding Tasks}" 
+                       RowSpacing="30" ColumnSpacing="20">
+
+        <controls:GridView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <ContentView BackgroundColor="White">
+                            <controls:TaskView BindingContext="{Binding}" />
+                        </ContentView>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </controls:GridView.ItemTemplate>
+
+    </controls:GridView>
+    <ContentPage.BindingContext>
+        <viewmodel:GridViewSampleViewModel />
+    </ContentPage.BindingContext>
+
+</ContentPage>
