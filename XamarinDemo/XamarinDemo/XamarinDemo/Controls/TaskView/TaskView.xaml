@@ -11,7 +11,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="20" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="40" />
+                <RowDefinition Height="35" />
             </Grid.RowDefinitions>
 
             <Label Grid.Row="0" Text="{Binding Path=Text}" HorizontalTextAlignment="Center"></Label>

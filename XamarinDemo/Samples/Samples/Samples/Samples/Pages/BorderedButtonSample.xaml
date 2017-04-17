@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
+             x:Class="Samples.Pages.BorderedButtonSample"
+             Padding="20"
+             BackgroundColor="#C6EDF4">
+
+    <StackLayout VerticalOptions="CenterAndExpand">
+        <Button Text="Default Button" TextColor="Blue" HeightRequest="50" BorderWidth="2" BorderRadius="25"
+                BorderColor="Blue" BackgroundColor="White" />
+        <controls:BorderedButton Text="Bordered Button" NormalTextColor="Blue" PressedTextColor="White"
+                                 NormalBackgroundColor="White" PressedBackgroundColor="Blue"
+                                 HeightRequest="50" BorderWidth="2" BorderRadius="25" BorderColor="Blue" />
+    </StackLayout>
+
+</ContentPage>

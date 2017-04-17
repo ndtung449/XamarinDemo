@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Samples.Pages"
+             xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
+             x:Class="Samples.Pages.GridViewPage"
+             Padding="20">
+
+    <controls:GridView x:Name="GrdView" ItemHeight="250" ItemWidth="250" RowSpacing="30" ColumnSpacing="100"
+                       ItemsSource="{x:Static local:GridViewPage.Images}">
+        <controls:GridView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Image Source="{Binding}" />
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </controls:GridView.ItemTemplate>
+    </controls:GridView>
+
+</ContentPage>

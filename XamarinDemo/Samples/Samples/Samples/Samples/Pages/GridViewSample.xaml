@@ -3,17 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
              xmlns:viewmodel="clr-namespace:Samples.ViewModels"
-             x:Class="Samples.Pages.GridViewSample">
+             xmlns:local="clr-namespace:Samples.Pages"
+             x:Class="Samples.Pages.GridViewSample"
+             Padding="20"
+             BackgroundColor="#C6EDF4">
 
-    <controls:GridView ItemHeight="300" ItemWidth="300" ItemsSource="{Binding Tasks}" 
-                       RowSpacing="30" ColumnSpacing="20">
+    <controls:GridView ItemHeight="250" ItemWidth="250" ItemsSource="{Static local:GridViewPage.Images}" 
+                       RowSpacing="30" ColumnSpacing="100">
 
         <controls:GridView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
                         <ContentView BackgroundColor="White">
-                            <controls:TaskView BindingContext="{Binding}" />
+                            <Image Source="{Binding}" />
                         </ContentView>
                     </ViewCell.View>
                 </ViewCell>
