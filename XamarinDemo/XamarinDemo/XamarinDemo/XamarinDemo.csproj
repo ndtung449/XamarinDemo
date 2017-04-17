@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\BorderedButton.cs" />
     <Compile Include="Controls\GridView.cs" />
     <Compile Include="Controls\TaskView\TaskView.xaml.cs">
       <DependentUpon>TaskView.xaml</DependentUpon>

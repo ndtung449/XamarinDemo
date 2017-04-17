@@ -16,6 +16,11 @@
             {
                 Title = "GridView Sample",
                 TargetType = typeof(GridViewSample)
+            },
+            new MasterPageItem
+            {
+                Title = "Bordered Button Sample",
+                TargetType = typeof(BorderedButtonSample)
             }
         };
 
