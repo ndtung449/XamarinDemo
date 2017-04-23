@@ -8,11 +8,20 @@
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class GridViewSample : ContentPage
     {
+        private GridViewSampleViewModel _viewmodel;
+
         public static string[] Images = new string[] { "icon", "icon", "icon", "icon", "icon", "icon" };
 
         public GridViewSample()
         {
             InitializeComponent();
+            _viewmodel = (GridViewSampleViewModel)BindingContext;
+            _viewmodel.OpenTask += OnOpenButtonClicked;
+        }
+
+        private void OnOpenButtonClicked(TaskViewViewModel task)
+        {
+            DisplayAlert("Alert", $"Open [{task.Text}]", "OK");
         }
     }
 }

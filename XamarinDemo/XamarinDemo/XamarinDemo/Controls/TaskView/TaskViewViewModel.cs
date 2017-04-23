@@ -59,6 +59,37 @@
             }
         }
 
+        private double _opacity = 1;
+
+        public double Opacity
+        {
+            get { return _opacity; }
+            protected set
+            {
+                if (_opacity != value)
+                {
+                    _opacity = value;
+                    OnPropertyChanged(nameof(Opacity));
+                }
+            }
+        }
+
+        private bool _isEnabled = true;
+
+        public bool IsEnabled
+        {
+            get { return _isEnabled; }
+            set
+            {
+                if(_isEnabled != value)
+                {
+                    _isEnabled = value;
+                    Opacity = 0.5;
+                    OnPropertyChanged(nameof(IsEnabled));
+                }
+            }
+        }
+
         private void OnPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

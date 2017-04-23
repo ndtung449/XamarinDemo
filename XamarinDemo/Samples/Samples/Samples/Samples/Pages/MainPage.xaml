@@ -10,7 +10,7 @@
     <MasterDetailPage.Detail>
         <NavigationPage>
             <x:Arguments>
-                <local:BorderedButtonSample />
+                <local:GridViewSample />
             </x:Arguments>
         </NavigationPage>
     </MasterDetailPage.Detail>

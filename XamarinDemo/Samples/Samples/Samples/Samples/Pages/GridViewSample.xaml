@@ -8,22 +8,21 @@
              Padding="20"
              BackgroundColor="#C6EDF4">
 
-    <controls:GridView ItemHeight="250" ItemWidth="250" ItemsSource="{Static local:GridViewPage.Images}" 
+    <controls:GridView ItemHeight="250" ItemWidth="250" ItemsSource="{Binding Tasks}" 
                        RowSpacing="30" ColumnSpacing="100">
-
         <controls:GridView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <ViewCell.View>
                         <ContentView BackgroundColor="White">
-                            <Image Source="{Binding}" />
+                            <controls:TaskView BindingContext="{Binding}" />
                         </ContentView>
                     </ViewCell.View>
                 </ViewCell>
             </DataTemplate>
         </controls:GridView.ItemTemplate>
-
     </controls:GridView>
+    
     <ContentPage.BindingContext>
         <viewmodel:GridViewSampleViewModel />
     </ContentPage.BindingContext>
