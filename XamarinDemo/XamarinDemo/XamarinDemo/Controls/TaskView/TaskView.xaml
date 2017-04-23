@@ -2,7 +2,8 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
-             x:Class="XamarinDemo.Controls.TaskView">
+             x:Class="XamarinDemo.Controls.TaskView"
+             Opacity="{Binding Opacity}">
     <ContentView.Content>
         <Grid Padding="2">
             <Grid.ColumnDefinitions>
@@ -16,7 +17,8 @@
 
             <Label Grid.Row="0" Text="{Binding Path=Text}" HorizontalTextAlignment="Center"></Label>
             <Image Grid.Row="1" Source="{Binding Path=Source}"></Image>
-            <Button Grid.Row="2" Text="Open" FontSize="Micro" Command="{Binding NotifyClickCommand}"></Button>
+            <Button Grid.Row="2" Text="Open" FontSize="Micro" Command="{Binding NotifyClickCommand}"
+                    IsEnabled="{Binding IsEnabled}"></Button>
         </Grid>
     </ContentView.Content>
 

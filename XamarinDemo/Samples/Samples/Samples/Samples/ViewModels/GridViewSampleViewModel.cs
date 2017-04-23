@@ -29,6 +29,7 @@
 
         private void OnButtonClicked(TaskViewViewModel task)
         {
+            task.IsEnabled = false;
             OpenTask?.Invoke(task);
         }
     }
