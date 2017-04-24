@@ -81,10 +81,19 @@
             get { return _isEnabled; }
             set
             {
-                if(_isEnabled != value)
+                if (_isEnabled != value)
                 {
                     _isEnabled = value;
-                    Opacity = 0.5;
+
+                    if (_isEnabled)
+                    {
+                        Opacity = 1;
+                    }
+                    else
+                    {
+                        Opacity = 0.5;
+                    }
+
                     OnPropertyChanged(nameof(IsEnabled));
                 }
             }
