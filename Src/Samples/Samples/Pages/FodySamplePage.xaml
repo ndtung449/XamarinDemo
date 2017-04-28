@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
+             xmlns:viewmodel="clr-namespace:Samples.ViewModels"
+             x:Class="Samples.Pages.FodySamplePage"
+             BackgroundColor="#C6EDF4">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="MyEntry" TargetType="{x:Type Entry}">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="TextColor" Value="#6699cc" />
+                <Setter Property="BackgroundColor" Value="White" />
+                <Setter Property="WidthRequest" Value="250" />
+            </Style>
+            <Style x:Key="MyButton" TargetType="controls:BorderedButton">
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="47" />
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="NormalTextColor" Value="#6699cc" />
+                <Setter Property="BorderWidth" Value="4" />
+                <Setter Property="BorderColor" Value="#089cde" />
+                <Setter Property="BorderRadius" Value="50" />
+                <Setter Property="NormalTextColor" Value="#000066" />
+                <Setter Property="Margin" Value="0, 20" />
+                <Setter Property="WidthRequest" Value="250" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+    <StackLayout VerticalOptions="Center">
+        <Entry Text="{ Binding UserName }" Placeholder="Your Name" Style="{ StaticResource MyEntry}" />
+        <controls:BorderedButton Text="SUBMIT" Style="{StaticResource MyButton}" Command="{ Binding SubmitCommand }" />
+    </StackLayout>
+
+    <ContentPage.BindingContext>
+        <viewmodel:FodySamplePageModel />
+    </ContentPage.BindingContext>
+</ContentPage>

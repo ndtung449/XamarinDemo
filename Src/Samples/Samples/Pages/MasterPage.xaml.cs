@@ -21,6 +21,11 @@
             {
                 Title = "Bordered Button Sample",
                 TargetType = typeof(BorderedButtonSample)
+            },
+            new MasterPageItem
+            {
+                Title = "Using PropertyChange.Fody Sample",
+                TargetType = typeof(FodySamplePage)
             }
         };
 
