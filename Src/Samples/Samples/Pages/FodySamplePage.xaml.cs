@@ -14,7 +14,7 @@
 
             var viewmodel = (FodySamplePageModel)BindingContext;
 
-            viewmodel.Submited = (username) => DisplayAlert("Sample", $"Welcome, {username}!!!", "OK");
+            viewmodel.Submitted = (username) => DisplayAlert("Sample", $"Welcome, {username}!!!", "OK");
         }
     }
 }

@@ -8,7 +8,7 @@
     [ImplementPropertyChanged]
     public class FodySamplePageModel
     {
-        public Action<string> Submited;
+        public Action<string> Submitted;
 
         public string UserName { get; set; }
 
@@ -16,7 +16,7 @@
         {
             get
             {
-                return new Command(() => Submited?.Invoke(UserName));
+                return new Command(() => Submitted?.Invoke(UserName));
             }
         }
     }
