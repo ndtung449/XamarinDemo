@@ -1,5 +1,6 @@
 ﻿namespace Samples.Pages
 {
+    using global::FreshMvvm;
     using System;
     using Xamarin.Forms;
 
@@ -14,11 +15,19 @@
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = e.SelectedItem as MasterPageItem;
-            if (item != null)
+            if (e.SelectedItem is MasterPageItem item)
             {
-                Detail = new NavigationPage((Page)Activator.CreateInstance(item.TargetType));
+                var page = (Page)Activator.CreateInstance(item.TargetType);
+
+                if (item.PageModelType != null)
+                {
+                    page.BindingContext = (FreshBasePageModel)Activator.CreateInstance(item.PageModelType);
+                }
+
+                Detail = new NavigationPage(page);
+
                 masterPage.ListView.SelectedItem = null;
+
                 IsPresented = false;
             }
         }

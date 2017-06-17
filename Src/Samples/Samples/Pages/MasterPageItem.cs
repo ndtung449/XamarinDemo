@@ -9,5 +9,7 @@
         public string IconSource { get; set; }
 
         public Type TargetType { get; set; }
+
+        public Type PageModelType { get; set; }
     }
 }

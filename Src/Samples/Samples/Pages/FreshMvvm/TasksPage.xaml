@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:XamarinDemo.Controls;assembly=XamarinDemo"
+             x:Class="Samples.Pages.FreshMvvm.TasksPage">
+
+    <StackLayout VerticalOptions="Center">
+        <controls:BorderedButton Text="Open Task 1" Style="{StaticResource StartButtonStyle}"
+                             Command="{Binding PushQuestionPageCommand}" CommandParameter="1" />
+        <controls:BorderedButton Text="Open Task 2" Style="{StaticResource StartButtonStyle}"
+                             Command="{Binding PushQuestionPageCommand}" CommandParameter="2" />
+        <controls:BorderedButton Text="Open Task 3" Style="{StaticResource StartButtonStyle}"
+                             Command="{Binding PushQuestionPageCommand}" CommandParameter="3" />
+        <controls:BorderedButton Text="Open Task 4" Style="{StaticResource StartButtonStyle}"
+                             Command="{Binding PushQuestionPageCommand}" CommandParameter="4" />
+    </StackLayout>
+
+</ContentPage>

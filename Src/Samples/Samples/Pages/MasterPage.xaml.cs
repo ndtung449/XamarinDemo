@@ -1,5 +1,7 @@
 ﻿namespace Samples.Pages
 {
+    using Samples.Pages.FreshMvvm;
+    using Samples.ViewModels.FreshMvvm;
     using System;
     using System.Collections.Generic;
     using Xamarin.Forms;
@@ -26,6 +28,12 @@
             {
                 Title = "Using PropertyChange.Fody Sample",
                 TargetType = typeof(FodySamplePage)
+            },
+            new MasterPageItem
+            {
+                Title = "FreshMvvm Sample",
+                TargetType = typeof(StartingPage),
+                PageModelType = typeof(StartingPageModel)
             }
         };
 

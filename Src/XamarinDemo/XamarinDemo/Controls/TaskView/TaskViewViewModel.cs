@@ -21,6 +21,21 @@
             });
         }
 
+        private int _taskId;
+
+        public int TaskId
+        {
+            get { return _taskId; }
+            set
+            {
+                if(_taskId != value)
+                {
+                    _taskId = value;
+                    OnPropertyChanged(nameof(TaskId));
+                }
+            }
+        }
+
         private ImageSource _source = "icon";
 
         public ImageSource Source
